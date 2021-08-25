@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+ <img src="런닝.jpg" width="100%">
+
+<nav>
+ <div id="static1"> - 신청관리 </div>
+ <br/>
+ <div id="static2"> - 강사관리 </div>
+ <br/>
+ <div id="static3"> - 회원별 식단관리 </div>
+ <br/>
+ <div id="static4"> - 스케줄관리 </div>
+ </nav>
+
+<h1>강사관리</h1>
+
+<style>
+    .sm-img.on {
+      border:solid 2px #888888;
+      opacity: 1 !important;
+    }
+    .sm-img {
+      opacity: 0.5;
+    }
+  </style>
+  <body>
+  <table>
+    <thead>
+      <tr>
+        <th>이름</th>
+        <th>성별</th>
+        <th>나이</th>
+        <th>번호</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td><input type="text" id="name" /></td>
+        <td><input type="text" id="gender" /></td>
+        <td><input type="text" id="age" /></td>
+        <td><input type="text" id="number" /></td>
+        <td><button onclick="addRow()">추가</button></td>
+        <td><button onclick="button02_click()">저장</button</td>
+      </tr>
+    </thead>
+    
+    <tbody id="tbody">
+    </tbody>
+  </table>
+  </body>
+
+  <script>
+    function button02_click(){
+      
+      var name = document.getElementById('name').value;
+      var gender = document.getElementById('gender').value;
+      var age = document.getElementById('age').value;
+      var number = document.getElementById('number').value;
+      if((name === "")||(gender === "")||(age === "")||(number === "")){
+          alert('정보를 모두 입력해주세요');} 
+          else{
+      var count = localStorage.length;
+      console.log(count);
+  
+      var teachkey = '__teach__' + count;
+      var userInfo = {
+          name: name,
+          gender: gender,
+          age: age,
+          number: number,
+      }
+      
+      
+      console.log(userInfo);
+      localStorage.setItem(teachkey, JSON.stringify(userInfo));
+      }
+   }
+  
+   localStorage.setItem(document.getElementById('name').value, document.getElementById('name').value);
+  
+   
+    function addRow() {
+      var idEl = document.getElementById('name');
+      var genderEl = document.getElementById('gender');
+      var ageEl = document.getElementById('age');
+      var numberEl = document.getElementById('number');
+  
+      var name = idEl.value;
+      var gender = genderEl.value;
+      var age = ageEl.value;
+      var number = numberEl.value;
+  
+      add_row({name:name, gender:gender, age:age, number:number})
+  
+      idEl.value = null
+      genderEl.value = null
+      ageEl.value = null
+      numberEl.value = null;
+    }
+  
+  
+    function add_row(data) {
+      var my_tbody = document.getElementById('tbody');
+      // var row = my_tbody.insertRow(0); // 상단에 추가
+      var row = my_tbody.insertRow( my_tbody.rows.length ); // 하단에 추가
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
+      var cell5 = row.insertCell(4);
+  
+      cell1.innerHTML = '<input type="text" id="name" value="'+data.name+'" disabled />';
+      cell2.innerHTML = '<input type="text" id="gender" value="'+data.gender+'" disabled />';
+      cell3.innerHTML = '<input type="text" id="age" value="'+data.age+'" disabled />';
+      cell4.innerHTML = '<input type="text" id="number" value="'+data.number+'"disabled/>';
+      cell5.innerHTML = '<button onclick="delete_row(this)">삭제</button>'
+    }
+  
+    function delete_row(button) {
+      var tr= button.parentNode.parentNode;
+      var index = tr.rowIndex - 1;
+      var my_tbody = document.getElementById('tbody');
+      my_tbody.deleteRow(index-1);
+    }
+  
+    function modify_row(button) {
+      alert('수정')
+    }
+  </script>
+
+<script>
+  function save() {
+    if (!confirm('저장하시겠습니까?')) {
+      return;
+    }
+    var contents = JSON.parse(localStorage.getItem("contents"));
+    if (!contents) {
+      contents = [];
+    }
+
+    var title = document.getElementById('title').value;
+    var writer = document.getElementById('writer').value;
+    var content = document.getElementById('contents').value;
+    contents.push({no:contents.length+1
+      , title:title
+      , writer:writer
+      , contents:content
+      , write_date:new Date()});
+    localStorage.setItem("contents", JSON.stringify(contents));
+
+    alert('저장되었습니다.');
+    location.href = 'list.html';
+  }
+</script>
+<table>
+<style>
+  nav {
+        float: left;
+        width: 30%;
+        height: 300px;
+    }
+
+ 
+ 
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  </style>
+  </head>
+  <body>
+    </table>
+
+</form> 
+</body>
+</html>
