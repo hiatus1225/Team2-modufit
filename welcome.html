@@ -11,18 +11,18 @@
         <a href="index.html"><img src="images/logo.png" alt="Modu Fit" width="30%"></a>
     </div>
 	<div id="map" style="width:300px;height:300px;position:absolute;">
-        <span>todo..</span>
-        <span><p id="welcomName">ddd</p>님 환영합니다.</span>
+        <span><h1>welcome</h1></span>
+        <span><span id="welcomName"></span>님 환영합니다.</span>
     </div>
-	<div style="right: 22%; position: absolute;">
+	<div style="margin: 6%;">
         <input type="button" value="등록 신청" style="font-size: 1.7rem;" onclick="">
     </div>
 
 </body>
 <script>
     document.addEventListener("DOMContentLoaded", function(){
-        var id = sessionStorage.getItem(__user__);
-        document.getElementById("welcomName").innerText();
+        var name = JSON.parse(sessionStorage.getItem("__user__"))["name"];
+        document.getElementById("welcomName").innerText = name;
     });
 </script>
 </html>
