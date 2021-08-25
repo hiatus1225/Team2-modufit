@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+ <img src="런닝.jpg" width="100%">
+
+<nav>
+ <div id="static1"> - 신청관리 </div>
+ <br/>
+ <div id="static2"> - 강사관리 </div>
+ <br/>
+ <div id="static3"> - 회원별 식단관리 </div>
+ <br/>
+ <div id="static4"> - 스케줄관리 </div>
+ </nav>
+<h1>강사관리</h1>
+<table>
+  <tbody><tr>
+    <th>이름</th>
+    <td><input type="fname" id="fname" name="fname"></td>
+  </tr>
+  <tr>
+    <th>성별</th>
+    <td><input type="text" id="text" name="text"></td>
+  </tr>
+  <tr>
+    <th>주소</th>
+    <td><input type="text" id="text" name="text"></td>
+  </tr>
+  <tr>
+    <th>번호</th>
+    <td>
+      <input type="phone-number" id="phone-number" name="phone-number">
+    </td>
+  </tr>
+</tbody></table>
+<div style="width:100%; text-align: right;">
+  <button onclick="window.history.back()">취소</button>
+  <button onclick="save()">저장</button>
+  <input type="button" class="btn" name="btn" value="추가" onclick="alert(&quot;추가하시겠습니까?&quot;)">
+  <input type="button" class="btn" name="btn" value="삭제" onclick="alert(&quot;삭제하시겠습니까?&quot;)">
+  <input type="button" class="btn" name="btn" value="수정" onclick="alert(&quot;수정하시겠습니까?&quot;)">
+</div>
+
+
+<script>
+  function save() {
+    if (!confirm('저장하시겠습니까?')) {
+      return;
+    }
+    var contents = JSON.parse(localStorage.getItem("contents"));
+    if (!contents) {
+      contents = [];
+    }
+
+    var title = document.getElementById('title').value;
+    var writer = document.getElementById('writer').value;
+    var content = document.getElementById('contents').value;
+    contents.push({no:contents.length+1
+      , title:title
+      , writer:writer
+      , contents:content
+      , write_date:new Date()});
+    localStorage.setItem("contents", JSON.stringify(contents));
+
+    alert('저장되었습니다.');
+    location.href = 'list.html';
+  }
+</script>
+<table>
+<style>
+  nav {
+        float: left;
+        width: 30%;
+        height: 300px;
+    }
+
+ 
+ 
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  </style>
+  </head>
+  <body>
+    </table>
+
+</form> 
+</body>
+</html>
