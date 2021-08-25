@@ -24,7 +24,7 @@ function button01_click(){
     var name = document.getElementById('name').value;
     var time = document.getElementById('time').value;
 
-    var applykey = '__apply__' + sessionStorage.getItem('');
+    var id = sessionStorage.getItem('__user__');
     var userInfo = {
         date: date,
         gender: gender,
@@ -32,7 +32,7 @@ function button01_click(){
         time: time
     };
     console.log(userInfo);
-    localStorage.setItem(applykey, JSON.stringify(userInfo));
+    localStorage.setItem(id, JSON.stringify(userInfo));
 
 }
 
