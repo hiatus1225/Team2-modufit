@@ -25,7 +25,7 @@ function button01_click(){
     if((date === "")||(gender === "")||(name === "")||(time === "")){
         alert('정보를 모두 입력해주세요');} 
         else{
-    var count = localStorage.length;
+    var count = localStorage.length+1;
     console.log(count);
 
     var applykey = '__apply__' + count;
@@ -43,4 +43,3 @@ function button01_click(){
 }
 
 localStorage.setItem(document.getElementById('date').value, document.getElementById('date').value);
-
