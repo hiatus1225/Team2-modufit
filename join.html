@@ -12,7 +12,7 @@
     <a href="index.html"><img src="images/logo.png" alt="Modu Fit" width="30%"></a>
 </div>
   <h3>회원가입</h3>
-  <form>
+  <form name ="f2">
   <label for="name"><b>성명</b>을 입력하세요</label><br>
   <input type="text" id="name"><br><br>
   <label for="contact"><b>연락처</b>를 입력하세요</label><br>
@@ -33,5 +33,87 @@
   
 </form>
 </body>
+<<<<<<< HEAD
 <script type="text/javascript" src="js/join.js"></script>
+=======
+<script>
+  function button1_click(){
+
+    var name = document.getElementById('name').value;
+    // localStorage.setItem("name", ui1)
+    var contact = document.getElementById('contact').value;
+    // localStorage.setItem("contact", ui2)
+    var id = document.getElementById('id').value;
+    // localStorage.setItem("user", ui3)
+    var pw = document.getElementById('pw').value;
+    // localStorage.setItem("pw", ui4)
+    var age = document.getElementById('age').value;
+    // localStorage.setItem("age", ui5)
+    var gender = document.getElementById('gender').value;
+    // localStorage.setItem("gender", ui6)
+
+    // console.log(ui, ui2, ui3, ui4, ui5, ui6);
+    var userkey = '__user__' + id;
+    var userInfo = {
+      name: name,
+      contact: contact,
+      id: id,
+      pw: pw,
+      age: age,
+      gender: gender,
+      rank:1
+    };
+
+    if(document.getElementById('name').value==""){
+        alert("성명을 입력해주세요.");
+        document.f2.name.focus();
+        return;
+    }
+
+    if(document.getElementById('contact').value==""){
+        alert("연락처를 입력해주세요.");
+        document.f2.contact.focus();
+        return;
+    }
+
+    if(document.getElementById('id').value==""){
+        alert("아이디를 입력해주세요.");
+        document.f2.id.focus();
+        return;
+    }
+
+    if(document.getElementById('pw').value==""){
+        alert("비밀번호를 입력해주세요.");
+        document.f2.pw.focus();
+        return;
+    }
+
+    if(document.getElementById('age').value==""){
+        alert("나이를 입력해주세요.");
+        document.f2.age.focus();
+        return;
+    }
+
+    if(document.getElementById('gender').value==""){
+        alert("성별을 선택해주세요.");
+        document.f2.gender.focus();
+        return;
+    }
+
+    //저장값을 한줄로
+    console.log(userInfo);
+    localStorage.setItem(userkey, JSON.stringify(userInfo));
+
+    // -----
+    location.href="login.html";
+
+  }
+  
+  localStorage.setItem(document.getElementById('name').value, document.getElementById('name').value);
+        
+      
+      
+  
+</script>
+>>>>>>> 7e73c79cbfa01873339d1e3313ca6b77d369afc0
 </html>
