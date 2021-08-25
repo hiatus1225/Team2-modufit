@@ -1,4 +1,3 @@
-
 function categoryChange(e) {
 	var name_men = ["홍길동","어린왕자","심봉사"];
 	var name_women = ["춘향", "콩쥐", "팥쥐", "신데렐라"];
@@ -24,7 +23,7 @@ function button01_click(){
     var name = document.getElementById('name').value;
     var time = document.getElementById('time').value;
 
-    var id = sessionStorage.getItem('__user__');
+    var applykey = '__apply__' + sessionStorage.getItem('');
     var userInfo = {
         date: date,
         gender: gender,
@@ -32,7 +31,7 @@ function button01_click(){
         time: time
     };
     console.log(userInfo);
-    localStorage.setItem(id, JSON.stringify(userInfo));
+    localStorage.setItem(applykey, JSON.stringify(userInfo));
 
 }
 
