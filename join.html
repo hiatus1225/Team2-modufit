@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>피트니스 회원가입</title>
+
+</head>
+<body>
+  
+  <h3>회원가입</h3>
+  <form>
+  <label for="name"><b>성명</b>을 입력하세요</label><br>
+  <input type="text" id="name"><br><br>
+  <label for="contact"><b>연락처</b>를 입력하세요</label><br>
+  <input type="text" id="contact"><br><br>
+  <label for="user"><b>아이디</b>를 입력하세요</label><br>
+  <input type="text" id="user"><br><br>
+  <label for="pw"><b>비밀번호</b>를 입력하세요</label><br>
+  <input type="text" id="pw"><br><br>
+  <label for="age"><b>나이</b>를 입력하세요</label><br>
+  <input type="number" id="age"><br><br>  
+  <b>성별</b>을 입력하세요 <br>
+  <select id="gender">
+    <option value="">-- 선택 --</option>
+    <option value="남자">남자</option>
+    <option value="여자">여자</option>
+  </select><br><br>
+  <input type="button" id="button1" onclick= 'button1_click()' name="clicked_id" value="가입하기">
+  
+</form>
+</body>
+<script>
+  function button1_click(){
+
+    var ui1 = document.getElementById('name').value;
+    localStorage.setItem("name", ui1)
+    var ui2 = document.getElementById('contact').value;
+    localStorage.setItem("contact", ui2)
+    var ui3 = document.getElementById('user').value;
+    localStorage.setItem("user", ui3)
+    var ui4 = document.getElementById('pw').value;
+    localStorage.setItem("pw", ui4)
+    var ui5 = document.getElementById('age').value;
+    localStorage.setItem("age", ui5)
+    var ui6 = document.getElementById('gender').value;
+    localStorage.setItem("gender", ui6)
+    
+    localStorage.setItem("name", name);
+
+  }
+  
+  localStorage.setItem(document.getElementById('name').value, document.getElementById('name').value);
+        
+      
+      
+  
+
+</script>
+</html>
