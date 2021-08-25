@@ -8,11 +8,37 @@
 </head>
 <body>
 
+    <script>
+        var currentDay = new Date();  
+var theYear = currentDay.getFullYear();
+var theMonth = currentDay.getMonth();
+var theDate  = currentDay.getDate();
+var theDayOfWeek = currentDay.getDay();
+ 
+var thisWeek = [];
+ 
+for(var i=0; i<7; i++) {
+  var resultDay = new Date(theYear, theMonth, theDate + (i - theDayOfWeek));
+  var yyyy = resultDay.getFullYear();
+  var mm = Number(resultDay.getMonth()) + 1;
+  var dd = resultDay.getDate();
+ 
+  mm = String(mm).length === 1 ? '0' + mm : mm;
+  dd = String(dd).length === 1 ? '0' + dd : dd;
+ 
+  thisWeek[i] = yyyy + '-' + mm + '-' + dd;
+}
+ 
+console.log(thisWeek);
+
+document.write(thisWeek[0]+"~"+thisWeek[6]);
+    </script>
+
     <li>
 
         <label for="guest">회원</label>
 
-        <select id="guest">
+        <select id="guest" onchange="refresh()">
 
             <option value="kim">김김김</option>
 
@@ -98,8 +124,9 @@
     <button id="enrollment" onclick="enrollment()">등록</button>
     
 
+<script>
+function enrollment() {
 
-    <script>
         var guest = document.getElementById('guest').value;
         var monmenu = document.getElementById('monmenu').value;
         var tuemenu = document.getElementById('tuemenu').value;
@@ -108,10 +135,10 @@
         var frimenu = document.getElementById('frimenu').value;
         var satmenu = document.getElementById('satmenu').value;
         var sunmenu = document.getElementById('sunmenu').value;
-    function enrollment() {
-    
-    console.log(guest, monmenu,tuemenu,wedmenu,thumenu,frimenu,satmenu,sunmenu);
+        console.log(guest, monmenu,tuemenu,wedmenu,thumenu,frimenu,satmenu,sunmenu);
+
     var userkey = '__user__' + guest;
+
     var userInfo = {
       guest: guest,
       mon: monmenu,
@@ -121,31 +148,33 @@
       fri: frimenu,
       sat: satmenu,
       sun: sunmenu
-      
     }
-
 
     console.log(userInfo);
     localStorage.setItem(userkey, JSON.stringify(userInfo));
   }
 
 
-    function guest_click(){
-        var guest = document.getElementById('guest')
-        if(guest.onselect){
-            monmenu.value=null;
-            tuemenu.value=null;
-            wedmenu.value=null;
-            thumenu.value=null;
-            frimenu.value=null;
-            satmenu.value=null;
-            sunmenu.value=null;
-            return;
-        }
+  function refresh(){
 
-    }   
-    </script>
+    monmenu.value=null;
+    tuemenu.value=null;
+    wedmenu.value=null;
+    thumenu.value=null;
+    frimenu.value=null;
+    satmenu.value=null;
+    sunmenu.value=null;
 
+
+
+  }
+
+
+  
+
+
+
+</script>
 
 
 </body>

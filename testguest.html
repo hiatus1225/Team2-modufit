@@ -7,11 +7,38 @@
     <title>Document</title>
 </head>
 <body>
+
+    <script>
+        var currentDay = new Date();  
+var theYear = currentDay.getFullYear();
+var theMonth = currentDay.getMonth();
+var theDate  = currentDay.getDate();
+var theDayOfWeek = currentDay.getDay();
+ 
+var thisWeek = [];
+ 
+for(var i=0; i<7; i++) {
+  var resultDay = new Date(theYear, theMonth, theDate + (i - theDayOfWeek));
+  var yyyy = resultDay.getFullYear();
+  var mm = Number(resultDay.getMonth()) + 1;
+  var dd = resultDay.getDate();
+ 
+  mm = String(mm).length === 1 ? '0' + mm : mm;
+  dd = String(dd).length === 1 ? '0' + dd : dd;
+ 
+  thisWeek[i] = yyyy + '-' + mm + '-' + dd;
+}
+ 
+console.log(thisWeek);
+
+document.write(thisWeek[0]+"~"+thisWeek[6]);
+    </script>
+
     <li>
 
         <label for="guest">회원</label>
 
-        <select id="guest" disabled>
+        <select id="guest">
 
             <option value="kim">김김김</option>
 
@@ -94,8 +121,12 @@
         </tr>
     </table>
 
-    <script>
-        function enrollment() {
+    
+    
+
+<script>
+function enrollment() {
+
         var guest = document.getElementById('guest').value;
         var monmenu = document.getElementById('monmenu').value;
         var tuemenu = document.getElementById('tuemenu').value;
@@ -104,27 +135,38 @@
         var frimenu = document.getElementById('frimenu').value;
         var satmenu = document.getElementById('satmenu').value;
         var sunmenu = document.getElementById('sunmenu').value;
-        
         console.log(guest, monmenu,tuemenu,wedmenu,thumenu,frimenu,satmenu,sunmenu);
-        var userkey = '__user__' + guest;
-        var userInfo = {
-          guest: guest,
-          mon: monmenu,
-          tue: tuemenu,
-          wed: wedmenu,
-          thu: thumenu,
-          fri: frimenu,
-          sat: satmenu,
-          sun: sunmenu
-          
-        }
-        console.log(userInfo);
-        localStorage.setItem(userkey, userInfo);
-        localStorage.getItem(userkey, userInfo);
-       
-      }
-      document.getElementById('monmenu').value;
-        </script>
+
+    var userkey = '__user__' + guest;
+
+    var userInfo = {
+      guest: guest,
+      mon: monmenu,
+      tue: tuemenu,
+      wed: wedmenu,
+      thu: thumenu,
+      fri: frimenu,
+      sat: satmenu,
+      sun: sunmenu
+    }
+
+    console.log(userInfo);
+    localStorage.setItem(userkey, userInfo);
+    localStorage.getItem(userkey);
+  }
+
+
+  document.getElementById("userkey").innerHTML = localStorage.userkey;
+
+
+ 
+
+</script>
+
 
 </body>
 </html>
+
+
+
+
