@@ -5,10 +5,9 @@
     </head>
     <body>
         <p>날짜선택</p>
-        <input type="date">
-        <P>성별</P>
-        <select onchange="categoryChange(this)">
-            <option>강사성별을 선택해주세요</option>
+        <input type="date" id="date">
+        <p>성별</p>
+        <select id="gender" onchange="categoryChange(this)">
             <option value="men">남자</option>
             <option value="women">여자</option>
             
@@ -18,13 +17,14 @@
         <select id="name">
         <option>강사이름 선택해주세요</option>
         </select>
-
+  
         <p>시간</p>
-        <select id="time">
-        <option>시간대를 선택해주세요</option>
-        </select>
-        <script type="text/javascript" src="yd.js"></script>
-</body>
-</html>
+        <input type="time" id="time">
+        <input type="button" id="button01" onclick='button01_click()' value="신청">
+        <script type="text/javascript" src="jh.js"></script>
+        
+  </body>
+  </html>
+  
 
 
