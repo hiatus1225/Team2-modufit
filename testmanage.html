@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <li>
+
+        <label for="guest">회원</label>
+
+        <select id="guest">
+
+            <option value="kim">김김김</option>
+
+            <option value="park">박박박</option>
+
+            <option value="lee">이이이</option>
+
+            <option value="arara">아라라</option>
+
+            <option value="uuu">우우우</option>
+
+            <option value="mumumu">무무무</option>
+
+            <option value="sususu">수수수</option>
+
+        </select>
+
+    </li>
+
+    <table>
+        <tr>
+            <th>월요일</th>
+            <th>화요일</th>
+            <th>수요일</th>
+            <th>목요일</th>
+            <th>금요일</th>
+            <th>토요일</th>
+            <th>일요일</th>
+        </tr>
+        <tr>
+            <td>
+                <form action="">
+                    <textarea name="" id="monmenu" cols="10" rows="30">
+    
+                    </textarea>
+                </form>
+            </td>
+            <td>
+                <form action="">
+                    <textarea name="" id="tuemenu" cols="10" rows="30">
+    
+                    </textarea>
+                </form>
+            </td>
+            <td>
+                <form action="">
+                    <textarea name="" id="wedmenu" cols="10" rows="30">
+    
+                    </textarea>
+                </form>
+            </td>
+            <td>
+                <form action="">
+                    <textarea name="" id="thumenu" cols="10" rows="30">
+    
+                    </textarea>
+                </form>
+            </td>
+            <td>
+                <form action="">
+                    <textarea name="" id="frimenu" cols="10" rows="30">
+    
+                    </textarea>
+                </form>
+            </td>
+            <td>
+                <form action="">
+                    <textarea name="" id="satmenu" cols="10" rows="30">
+    
+                    </textarea>
+                </form>
+            </td>
+            <td>
+                <form action="">
+                    <textarea name="" id="sunmenu" cols="10" rows="30">
+    
+                    </textarea>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    <button id="enrollment" onclick="enrollment()">등록</button>
+    
+
+
+    <script>
+        var guest = document.getElementById('guest').value;
+        var monmenu = document.getElementById('monmenu').value;
+        var tuemenu = document.getElementById('tuemenu').value;
+        var wedmenu = document.getElementById('wedmenu').value;
+        var thumenu = document.getElementById('thumenu').value;
+        var frimenu = document.getElementById('frimenu').value;
+        var satmenu = document.getElementById('satmenu').value;
+        var sunmenu = document.getElementById('sunmenu').value;
+    function enrollment() {
+    
+    console.log(guest, monmenu,tuemenu,wedmenu,thumenu,frimenu,satmenu,sunmenu);
+    var userkey = '__user__' + guest;
+    var userInfo = {
+      guest: guest,
+      mon: monmenu,
+      tue: tuemenu,
+      wed: wedmenu,
+      thu: thumenu,
+      fri: frimenu,
+      sat: satmenu,
+      sun: sunmenu
+      
+    }
+
+
+    console.log(userInfo);
+    localStorage.setItem(userkey, JSON.stringify(userInfo));
+  }
+
+
+    function guest_click(){
+        var guest = document.getElementById('guest')
+        if(guest.onselect){
+            monmenu.value=null;
+            tuemenu.value=null;
+            wedmenu.value=null;
+            thumenu.value=null;
+            frimenu.value=null;
+            satmenu.value=null;
+            sunmenu.value=null;
+            return;
+        }
+
+    }   
+    </script>
+
+
+
+</body>
+</html>
+
