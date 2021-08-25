@@ -17,3 +17,24 @@ function categoryChange(e) {
 	}
 }
 
+function button01_click(){
+
+    var date = document.getElementById('date').value;
+    var gender = document.getElementById('gender').value;
+    var name = document.getElementById('name').value;
+    var time = document.getElementById('time').value;
+
+    var id = sessionStorage.getItem('__user__');
+    var userInfo = {
+        date: date,
+        gender: gender,
+        name: name,
+        time: time
+    };
+    console.log(userInfo);
+    localStorage.setItem(id, JSON.stringify(userInfo));
+
+}
+
+localStorage.setItem(document.getElementById('date').value, document.getElementById('date').value);
+

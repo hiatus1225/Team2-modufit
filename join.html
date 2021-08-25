@@ -54,10 +54,14 @@
       id: id,
       pw: pw,
       age: age,
-      gender: gender
+      gender: gender,
+      rank:1
     };
     console.log(userInfo);
     localStorage.setItem(userkey, JSON.stringify(userInfo));
+
+    // -----
+    location.href="login.html";
 
   }
   
@@ -66,6 +70,5 @@
       
       
   
-
 </script>
 </html>
