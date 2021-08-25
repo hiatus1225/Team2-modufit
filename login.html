@@ -52,7 +52,7 @@ function bt1_click() {
                     gender: userInfo["gender"],
                     rank: userInfo["rank"]
                 };
-            sessionStorage.setItem("__user__"+userInfo["id"],JSON.stringify(sessionUserInfo));
+            sessionStorage.setItem("__user__",JSON.stringify(sessionUserInfo));
             if(userInfo["rank"]==1){location.href="welcome.html"; return}
             location.href="manageApply.html";
             return;

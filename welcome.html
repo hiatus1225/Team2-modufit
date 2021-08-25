@@ -12,11 +12,17 @@
     </div>
 	<div id="map" style="width:300px;height:300px;position:absolute;">
         <span>todo..</span>
-        <span><p id="name">ddd</p>님 환영합니다.</span>
+        <span><p id="welcomName">ddd</p>님 환영합니다.</span>
     </div>
 	<div style="right: 22%; position: absolute;">
         <input type="button" value="등록 신청" style="font-size: 1.7rem;" onclick="">
     </div>
 
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+        var id = sessionStorage.getItem(__user__);
+        document.getElementById("welcomName").innerText();
+    });
+</script>
 </html>
