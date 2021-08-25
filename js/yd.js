@@ -1,11 +1,12 @@
 function categoryChange(e) {
-	var name_men = ["홍길동","어린왕자","심봉사"];
-	var name_women = ["춘향", "콩쥐", "팥쥐", "신데렐라"];
-	var target = document.getElementById("name");
-
-	if(e.value == "men") var d = name_men;
-	else if(e.value == "women") var d = name_women;
-	
+    var d;
+    var target = document.getElementById("name");
+    var gender = document.getElementById('gender').value;
+    var name_men = ["홍길동","어린왕자","심봉사"];
+    var name_women = ["춘향", "콩쥐", "팥쥐", "신데렐라"];
+    
+        if(e.value == "men") d = name_men;
+        else if(e.value == "women") d = name_women;
     target.options.length = 0;
 
 	for (x in d) {
@@ -23,7 +24,10 @@ function button01_click(){
     var name = document.getElementById('name').value;
     var time = document.getElementById('time').value;
 
-    var applykey = '__apply__' + sessionStorage.getItem('');
+    var count = localStorage.length+1;
+    console.log(count);
+
+    var applykey = '__apply__' + count;
     var userInfo = {
         date: date,
         gender: gender,
