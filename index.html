@@ -11,13 +11,13 @@
         <a href="index.html"><img src="images/logo.png" alt="Modu Fit" width="30%"></a>
     </div>
 	<div id="map" style="width:500px;height:400px;position:absolute;">
-        <a href="https://map.naver.com/v5/search/%EC%88%9C%EC%B2%9C%EB%8C%80%ED%95%99%EA%B5%90/place/17302011?c=14190141.9861670,4159822.7116529,16,0,0,0,dh">
+        <a href="https://map.naver.com/v5/search/%EC%88%9C%EC%B2%9C%EB%8C%80%ED%95%99%EA%B5%90/place/17302011?c=14190141.9861670,4159822.7116529,16,0,0,0,dh" target="_blank">
             <span><img src="images/map.png" style="width:500px;height:400px;"></span>
             <span>지도로 보기</span>
         </a>
     </div>
 	<div style="right: 22%; position: absolute;">
-        <input type="button" value="로그인" style="font-size: 1.7rem;">
+        <input type="button" value="로그인" style="font-size: 1.7rem;" onclick="javascript:goLogin()">
     </div>
     <div style="position: absolute; bottom: 22%;">
         <p><b>오시는 길</b><br> 
@@ -25,4 +25,9 @@
         </p>
     </div>
 </body>
+<script>
+    function goLogin(){
+        location.href="login.html";
+    }
+</script>
 </html>
