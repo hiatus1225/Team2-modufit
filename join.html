@@ -14,8 +14,8 @@
   <input type="text" id="name"><br><br>
   <label for="contact"><b>연락처</b>를 입력하세요</label><br>
   <input type="text" id="contact"><br><br>
-  <label for="user"><b>아이디</b>를 입력하세요</label><br>
-  <input type="text" id="user"><br><br>
+  <label for="id"><b>아이디</b>를 입력하세요</label><br>
+  <input type="text" id="id"><br><br>
   <label for="pw"><b>비밀번호</b>를 입력하세요</label><br>
   <input type="text" id="pw"><br><br>
   <label for="age"><b>나이</b>를 입력하세요</label><br>
@@ -33,20 +33,31 @@
 <script>
   function button1_click(){
 
-    var ui1 = document.getElementById('name').value;
-    localStorage.setItem("name", ui1)
-    var ui2 = document.getElementById('contact').value;
-    localStorage.setItem("contact", ui2)
-    var ui3 = document.getElementById('user').value;
-    localStorage.setItem("user", ui3)
-    var ui4 = document.getElementById('pw').value;
-    localStorage.setItem("pw", ui4)
-    var ui5 = document.getElementById('age').value;
-    localStorage.setItem("age", ui5)
-    var ui6 = document.getElementById('gender').value;
-    localStorage.setItem("gender", ui6)
-    
-    localStorage.setItem("name", name);
+    var name = document.getElementById('name').value;
+    // localStorage.setItem("name", ui1)
+    var contact = document.getElementById('contact').value;
+    // localStorage.setItem("contact", ui2)
+    var id = document.getElementById('id').value;
+    // localStorage.setItem("user", ui3)
+    var pw = document.getElementById('pw').value;
+    // localStorage.setItem("pw", ui4)
+    var age = document.getElementById('age').value;
+    // localStorage.setItem("age", ui5)
+    var gender = document.getElementById('gender').value;
+    // localStorage.setItem("gender", ui6)
+
+    // console.log(ui, ui2, ui3, ui4, ui5, ui6);
+    var userkey = '__user__' + id;
+    var userInfo = {
+      name: name,
+      contact: contact,
+      id: id,
+      pw: pw,
+      age: age,
+      gender: gender
+    };
+    console.log(userInfo);
+    localStorage.setItem(userkey, JSON.stringify(userInfo));
 
   }
   
