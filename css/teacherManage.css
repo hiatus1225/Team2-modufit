@@ -1,0 +1,29 @@
+body{
+    margin-right: 10%; 
+    margin-left: 10%; 
+    text-align: center; 
+}
+
+nav {
+    float: left;
+    width: 200px;
+    height: 650px;
+    background-color: rgb(127, 155, 127);
+}
+
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 70%;
+display: unset;
+}
+
+td, th {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+}
+
+tr:nth-child(even) {
+background-color: #dddddd;
+}

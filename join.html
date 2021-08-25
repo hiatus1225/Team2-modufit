@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-  <meta charset="UTF-8">
-  <title>피트니스 회원가입</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modu Fit</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="css/welcome.css">
 </head>
 <body>
-  
+  <div>
+    <a href="index.html"><img src="images/logo.png" alt="Modu Fit" width="30%"></a>
+</div>
   <h3>회원가입</h3>
   <form>
   <label for="name"><b>성명</b>을 입력하세요</label><br>
@@ -30,45 +33,5 @@
   
 </form>
 </body>
-<script>
-  function button1_click(){
-
-    var name = document.getElementById('name').value;
-    // localStorage.setItem("name", ui1)
-    var contact = document.getElementById('contact').value;
-    // localStorage.setItem("contact", ui2)
-    var id = document.getElementById('id').value;
-    // localStorage.setItem("user", ui3)
-    var pw = document.getElementById('pw').value;
-    // localStorage.setItem("pw", ui4)
-    var age = document.getElementById('age').value;
-    // localStorage.setItem("age", ui5)
-    var gender = document.getElementById('gender').value;
-    // localStorage.setItem("gender", ui6)
-
-    // console.log(ui, ui2, ui3, ui4, ui5, ui6);
-    var userkey = '__user__' + id;
-    var userInfo = {
-      name: name,
-      contact: contact,
-      id: id,
-      pw: pw,
-      age: age,
-      gender: gender,
-      rank:1
-    };
-    console.log(userInfo);
-    localStorage.setItem(userkey, JSON.stringify(userInfo));
-
-    // -----
-    location.href="login.html";
-
-  }
-  
-  localStorage.setItem(document.getElementById('name').value, document.getElementById('name').value);
-        
-      
-      
-  
-</script>
+<script type="text/javascript" src="js/join.js"></script>
 </html>

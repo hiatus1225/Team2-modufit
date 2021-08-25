@@ -1,0 +1,20 @@
+body{
+    margin-right: 10%; 
+    margin-left: 10%; 
+    text-align: center; 
+}
+
+#welcomeContainer {
+    width: 60%;
+    margin-left: 130px;
+}
+
+#applyButtonContainer{
+    margin: 35px;
+}
+
+#applyButton{
+    width: 60%;
+    font-size: 1.7rem;
+}
+
