@@ -1,15 +1,31 @@
-body{
-    margin-right: 0%; 
-    margin-left: 0%; 
-    text-align: center; 
+body {
+    margin-right: 0%;
+    margin-left: 0%;
+    text-align: center;
+}
+
+.sm-img.on {
+    border:solid 2px #888888;
+    opacity: 1 !important;
+}
+.sm-img {
+    opacity: 0.5;
 }
 
 nav {
+    float: left;
+    width: 20%;
+    height: 300px;
+}
+
+
+
+
+#nav1 {
     position: relative;
     float: left;
     width: 200px;
     height: 650px;
-    background-color: rgb(127, 155, 127);
 }
 
 table {
@@ -45,5 +61,3 @@ background-color: #dddddd;
     right: 140px;
     top: 45px;
 }
-
-

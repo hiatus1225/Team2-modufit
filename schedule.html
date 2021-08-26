@@ -5,86 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/schedule.js"></script>
-
-  <title>Document</title>
-  <style>
-    body {
-            padding: 0;
-            margin: 0;
-        }
-    .sm-img.on {
-      border:solid 2px #888888;
-      opacity: 1 !important;
-    }
-    .sm-img {
-      opacity: 0.5;
-    }
- 
-    nav {
-        float: left;
-        width: 30%;
-        height: 300px;
-    }
-   
-
-    table.timetable {
-        position: absolute;
-        top: 25%;
-        left: 50%;
-        margin-left: -400px;
-        table-layout: fixed;
-        empty-cells: show;
-        border-collapse: collapse;
-    }
-
-    #table_title {
-        padding: 10px;
-        font-size: 30px;
-
-        
-    }
-
-    table,
-    th,
-    td {
-        border: solid 1px black;
-        border-collapse: collapse; 
-    }
-
-    th,
-    td {
-        width: 100px;
-        height: 30px;
-    }
-    
-
-    #corner {
-        color: aliceblue;
-    }
-
-    #manager{
-        position: relative;
-        z-index: 1;
-    }
-
-    aside {
-        margin-top: 10px;
-        margin-left: 1100px;
-        position: absolute;
-    }
-
-  </style>
+    <link rel="sytlesheet" href="css/schedule.css">
+  <title>Modu Fit</title>
 </head>
 <body>
   
   <img src="images/headerImg.jpg" width="100%" >
    
    <nav>
-    <div id="static1"> - 신청관리 </div>
+    <div id="static1"> -<a id="ahref1" href="#" onclick="javascript:hrefClick(this.id);" > 신청관리 </a></div>
     <br/>
-    <div id="static2"> - 강사관리 </div>
+    <div id="static2"> -<a id="ahref2" href="#" onclick="javascript:hrefClick(this.id);" > 강사관리 </a></div>
     <br/>
-    <div id="static4"><b> - 스케줄관리 </b> </div>
+    <div id="static4"><b> -<a id="ahref3" href="#" onclick="javascript:hrefClick(this.id);" > 스케줄관리 </a></b> </div>
     </nav>
 
    <select id = "manager">
@@ -453,4 +386,5 @@
         </aside>
  
 </body>
+<script type="text/javascript" src="js/manageApply.js"></script>
 </html>
