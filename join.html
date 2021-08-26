@@ -39,17 +39,13 @@
 <script>
 
   function idcheck_click() {
-    var key = Object.keys(localStorage);a
-    var localID = document.getElementById("id").value;
+
+    var key = Object.keys(localStorage);
+    var localID= document.getElementById("id").value;
     if(localID===null || localID===""){
       alert("아이디를 입력해 주세요.");
       return;
     }
-
-
-
-
-
     for(let i = 0; i < key.length;i++){
       if (key[i]!=="__user__"){
         if("__user__"+localID === key[i]){
