@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Modu Fit</title>
+    <link rel="icon" href="images/icon.png">
 </head>
+<style>
+    #scheduleBoard{
+        display: unset;
+    }
+</style>
 <body>
-
+    <div>
+        <a href="index.html"><img src="images/logo.png" alt="Modu Fit" width="30%"></a>
+    </div>
     <script>
         var currentDay = new Date();  
 var theYear = currentDay.getFullYear();
@@ -58,7 +65,7 @@ document.write(thisWeek[0]+"~"+thisWeek[6]);
 
     </li>
 
-    <table>
+    <table id="scheduleBoard">
         <tr>
             <th>월요일</th>
             <th>화요일</th>
