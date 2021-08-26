@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="js/schedule.js"></script>
-    <style>
-        body {
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/schedule.js"></script>
+
+  <title>Document</title>
+  <style>
+    body {
             padding: 0;
             margin: 0;
         }
+    .sm-img.on {
+      border:solid 2px #888888;
+      opacity: 1 !important;
+    }
+    .sm-img {
+      opacity: 0.5;
+    }
+ 
+    nav {
+        float: left;
+        width: 30%;
+        height: 300px;
+    }
+  
 
         table.timetable {
             position: absolute;
-            top: 15%;
+            top: 25%;
             left: 50%;
             margin-left: -400px;
             table-layout: fixed;
@@ -40,21 +54,32 @@
             width: 100px;
             height: 30px;
         }
+        
 
         #corner {
             color: aliceblue;
         }
-    </style>
-
+  </style>
 </head>
-
 <body>
+  
+  <img src="images/headerImg.jpg" width="100%">
+   
+   <nav>
+    <div id="static1"> - 신청관리 </div>
+    <br/>
+    <div id="static2"> - 강사관리 </div>
+    <br/>
+    <div id="static3"> - 회원별 식단관리 </div>
+    <br/>
+    <div id="static4"><b> - 스케줄관리 </b> </div>
+    </nav>
 
-<select id = "manager">
+   <select id = "manager">
     <option value="kim">김ㅇㅇ</option>
     <option value="lee">이ㅇㅇ</option>
     <option value="park">박ㅇㅇ</option>
-</select>
+  </select>
 
     <table class="timetable center" style='table-layout:fixed;' id="maintable">
 
@@ -64,7 +89,7 @@
 
             <tr>
 
-                <th width="30px" style="background-color:#036635;" id="corner">시</th>
+                <th width="30px" style="background-color:#036635;" id="corner"></th>
 
                 <th>일</th>
 
@@ -411,7 +436,6 @@
             </tr>
 
         </tbody>
-
+ 
 </body>
-
 </html>
