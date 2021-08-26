@@ -25,7 +25,7 @@
         width: 30%;
         height: 300px;
     }
-  
+   
 
         table.timetable {
             position: absolute;
@@ -40,6 +40,8 @@
         #table_title {
             padding: 10px;
             font-size: 30px;
+
+            
         }
 
         table,
@@ -59,18 +61,28 @@
         #corner {
             color: aliceblue;
         }
+
+        #manager{
+            position: relative;
+            z-index: 1;
+        }
+
+        aside {
+            margin-top: 10px;
+            margin-left: 1100px;
+            position: absolute;
+        }
+
   </style>
 </head>
 <body>
   
-  <img src="images/headerImg.jpg" width="100%">
+  <img src="images/headerImg.jpg" width="100%" >
    
    <nav>
     <div id="static1"> - 신청관리 </div>
     <br/>
     <div id="static2"> - 강사관리 </div>
-    <br/>
-    <div id="static3"> - 회원별 식단관리 </div>
     <br/>
     <div id="static4"><b> - 스케줄관리 </b> </div>
     </nav>
@@ -436,6 +448,9 @@
             </tr>
 
         </tbody>
+        <aside>
+            <p>※ 테이블에 공백을 <br>&nbsp;&nbsp;&nbsp;넣으면 삭제 됩니다.</p>
+        </aside>
  
 </body>
 </html>
