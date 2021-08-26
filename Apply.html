@@ -19,21 +19,22 @@
         <p>날짜선택</p>
         <input type="date" id="date">
         <p>성별</p>
-        <select id="gender" onchange="categoryChange(this)">
+        <select id="gender">
             <option value="">성별을 선택해주세요</option>
             <option value="men">남자</option>
             <option value="women">여자</option>
             
         </select>
         
-        <p>이름</p>
+        <p>강사 선택</p>
         <select id="name">
-        <option value="">강사이름 선택해주세요</option>
+            
         </select>
   
         <p>시간</p>
         <input type="time" id="time">
         <input type="button" id="button01" onclick='button01_click()' value="신청">
+        <input type="button" id="button02" onclick='location.href="welcome.html"' value="홈으로...">
         <script type="text/javascript" src="js/Apply.js"></script>
         
   </body>
