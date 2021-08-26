@@ -7,36 +7,7 @@
     <link rel="icon" href="images/icon.png">
     <link rel="stylesheet" href="css/teacherManage.css">
 </head>
-<style>
-    #wapper{
-        display: block;
-    }
-    header, nav, section{
-        margin: 5px;
-        padding: 7px;
-    }
-
-    header{
-        height: 50px;
-    }
-    nav, section{
-        float:left;
-        height: 80%;
-    }
-    nav{
-        width: 100px;
-    }
-    section{
-        width: 700px;
-    }
-    article{
-        width: 90%;
-        margin: 20px;
-    }
-    td, th {border:solid 1px}
-    table {border-collapse: collapse;}
-</style>
-<body style="text-align: center;">
+<body>
     <div id="wapper">
         <header>
             <img src="images/headerImg.jpg" width="100%">
@@ -48,36 +19,26 @@
             <br/>
             <div id="static4"> - 스케줄관리 </div>
         </nav>
-        <section>
-            <p>section</p>
-            <article>
-                <p>article</p>
-            </article>
-        </section>
     </div>
-    <table>
-        <tr>
-            <th>회원ID</th>
-            <th>성별</th>
-            <th>주소</th>
-            <th>연락처</th>
-            <th>요일&시간</th>
-            <th>담당 강사</th>
-            <th>승인여부</th>
-        </tr>
-        <tbody id="rows" style="height: 1cm;">
+    <div>
+        <table>
             <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th> <input type="checkbox" id="ack" name="ack" value="ack">
-            </th>
+                <th>회원ID</th>
+                <th>성별</th>
+                <th>주소</th>
+                <th>연락처</th>
+                <th>요일&시간</th>
+                <th>담당 강사</th>
+                <th>승인여부</th>
             </tr>
-        </tbody>
-    </table>
+            <tbody id="rows" style="height: 1cm;">
+                
+                <th> <input type="checkbox" id="ack" name="ack" value="ack">
+                </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 <select id = "tname">
     <option value="">강사</option>
     <option value="홍길동">홍길동</option>
@@ -87,15 +48,11 @@
     <option value="콩쥐">콩쥐</option>
     <option value="팥쥐">팥쥐</option>
     <option value="신데렐라">신데렐라</option>
-
 </select>
+
 <input type="button" id="button1" name="ack" value="승인">
-
-
-
 </body>
 <script>
-   
 
 </script>
 </html>

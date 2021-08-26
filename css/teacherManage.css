@@ -5,6 +5,7 @@ body{
 }
 
 nav {
+    position: relative;
     float: left;
     width: 200px;
     height: 650px;
@@ -12,6 +13,7 @@ nav {
 }
 
 table {
+    margin: 4%;
 font-family: arial, sans-serif;
 border-collapse: collapse;
 width: 70%;
@@ -27,3 +29,4 @@ padding: 8px;
 tr:nth-child(even) {
 background-color: #dddddd;
 }
+
