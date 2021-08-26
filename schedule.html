@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -91,15 +91,21 @@
         document.write(thisWeek[0] + "~" + thisWeek[6]);
     </script>
 
+    <br>
+    <br>
+
+
+    <a href="#" id="guest">회원님</a>
+
     <script>
-        var guest = "ㅇㅇ회원"
-        document.write(guest + "님 안녕하세요.");
+        document.write(" 안녕하세요.");
     </script>
 
-    <br>
-    <br>
-    <br>
 
+    <br>
+    <br>
+    <br>
+    <form>
     <li>
         <label for="memo">메모</label>
         <input type="text" id="memo">
@@ -130,7 +136,7 @@
     </li>
     <li>
 
-        <label for="timeStart">시간</label>
+        <label for="timeStart">예약시간</label>
 
         <select id="timeStart" class="timesize">
 
@@ -174,7 +180,7 @@
 
     <li>
 
-        <label for="time">시간</label>
+        <label for="time">수업시간</label>
 
         <select id="time">
 
@@ -185,7 +191,7 @@
 
 
     </li>
-
+</form>
 
     <button id="reservon" onclick="reservon();">등록</button>
     <button id="delete" onclick="colorChange();">삭제</button>
@@ -193,7 +199,7 @@
 
 
 
-    <table class="timetable center" style='table-layout:fixed;'>
+    <table class="timetable center" style='table-layout:fixed;' id="maintable">
 
         <caption id="table_title">Schedule</caption>
 
@@ -227,7 +233,7 @@
 
                 <th>7</th>
 
-                <td id="sun7" onclick="colorChange();"></td>
+                <td id="sun7" onclick="colorChange();"><form action=""></form></td>
 
                 <td id="mon7" onclick="colorChange();"></td>
 
