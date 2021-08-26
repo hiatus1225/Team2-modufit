@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+  
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,47 +15,30 @@
 
         table.timetable {
             position: absolute;
-
-            top: 35%;
-
+            top: 15%;
             left: 50%;
-
             margin-left: -400px;
-
-
-
             table-layout: fixed;
-
-
             empty-cells: show;
-
-
             border-collapse: collapse;
-
-
         }
-
 
         #table_title {
             padding: 10px;
             font-size: 30px;
         }
 
-
-
         table,
         th,
         td {
             border: solid 1px black;
-            border-collapse: collapse;
-            
-
+            border-collapse: collapse; 
         }
 
         th,
         td {
             width: 100px;
-            height: 45px;
+            height: 30px;
         }
 
         #corner {
@@ -67,137 +50,11 @@
 
 <body>
 
-    <script>
-        var currentDay = new Date();
-        var theYear = currentDay.getFullYear();
-        var theMonth = currentDay.getMonth();
-        var theDate = currentDay.getDate();
-        var theDayOfWeek = currentDay.getDay();
-
-        var thisWeek = [];
-
-        for (var i = 0; i < 7; i++) {
-            var resultDay = new Date(theYear, theMonth, theDate + (i - theDayOfWeek));
-            var yyyy = resultDay.getFullYear();
-            var mm = Number(resultDay.getMonth()) + 1;
-            var dd = resultDay.getDate();
-
-            mm = String(mm).length === 1 ? '0' + mm : mm;
-            dd = String(dd).length === 1 ? '0' + dd : dd;
-
-            thisWeek[i] = yyyy + '-' + mm + '-' + dd;
-        }
-
-        document.write(thisWeek[0] + "~" + thisWeek[6]);
-    </script>
-
-    <br>
-    <br>
-
-
-    <a href="#" id="guest">회원님</a>
-
-    <script>
-        document.write(" 안녕하세요.");
-    </script>
-
-
-    <br>
-    <br>
-    <br>
-    <form>
-    <li>
-        <label for="memo">메모</label>
-        <input type="text" id="memo">
-    </li>
-
-    <li>
-
-        <label for="day">요일</label>
-
-        <select id="day">
-
-            <option value="sun">일요일</option>
-
-            <option value="mon">월요일</option>
-
-            <option value="tue">화요일</option>
-
-            <option value="wed">수요일</option>
-
-            <option value="thu">목요일</option>
-
-            <option value="fri">금요일</option>
-
-            <option value="sat">토요일</option>
-
-        </select>
-
-    </li>
-    <li>
-
-        <label for="timeStart">예약시간</label>
-
-        <select id="timeStart" class="timesize">
-
-            <option value="7">7</option>
-
-            <option value="8">8</option>
-
-            <option value="9">9</option>
-
-            <option value="10">10</option>
-
-            <option value="11">11</option>
-
-            <option value="12">12</option>
-
-            <option value="13">13</option>
-
-            <option value="14">14</option>
-
-            <option value="15">15</option>
-
-            <option value="16">16</option>
-
-            <option value="17">17</option>
-
-            <option value="18">18</option>
-
-            <option value="19">19</option>
-
-            <option value="20">20</option>
-
-            <option value="21">21</option>
-
-            <option value="22">22</option>
-
-            <option value="23">23</option>
-
-        </select>
-
-    </li>
-
-    <li>
-
-        <label for="time">수업시간</label>
-
-        <select id="time">
-
-            <option value="1">1</option>
-
-        </select>
-
-
-
-    </li>
-</form>
-
-    <button id="reservon" onclick="reservon();">등록</button>
-    <button id="delete" onclick="colorChange();">삭제</button>
-    <button id="enrollment" onclick="enrollment();">저장</button>
-
-
+<select id = "manager">
+    <option value="kim">김ㅇㅇ</option>
+    <option value="lee">이ㅇㅇ</option>
+    <option value="park">박ㅇㅇ</option>
+</select>
 
     <table class="timetable center" style='table-layout:fixed;' id="maintable">
 
@@ -233,323 +90,323 @@
 
                 <th>7</th>
 
-                <td id="sun7" onclick="colorChange();"><form action=""></form></td>
+                <td id="sun7" onclick="selectCell(this);"></td>
 
-                <td id="mon7" onclick="colorChange();"></td>
+                <td id="mon7" onclick="selectCell(this);"></td>
 
-                <td id="tue7" onclick="colorChange();"></td>
+                <td id="tue7" onclick="selectCell(this);"></td>
 
-                <td id="wed7" onclick="colorChange();"></td>
+                <td id="wed7" onclick="selectCell(this);"></td>
 
-                <td id="thu7" onclick="colorChange();"></td>
+                <td id="thu7" onclick="selectCell(this);"></td>
 
-                <td id="fri7" onclick="colorChange();"></td>
+                <td id="fri7" onclick="selectCell(this);"></td>
 
-                <td id="sat7" onclick="colorChange();"></td>
+                <td id="sat7" onclick="selectCell(this);"></td>
 
             </tr>
             <tr>
 
                 <th>8</th>
 
-                <td id="sun8" onclick="colorChange();"></td>
+                <td id="sun8" onclick="selectCell(this);"></td>
 
-                <td id="mon8" onclick="colorChange();"></td>
+                <td id="mon8" onclick="selectCell(this);"></td>
 
-                <td id="tue8" onclick="colorChange();"></td>
+                <td id="tue8" onclick="selectCell(this);"></td>
 
-                <td id="wed8" onclick="colorChange();"></td>
+                <td id="wed8" onclick="selectCell(this);"></td>
 
-                <td id="thu8" onclick="colorChange();"></td>
+                <td id="thu8" onclick="selectCell(this);"></td>
 
-                <td id="fri8" onclick="colorChange();"></td>
+                <td id="fri8" onclick="selectCell(this);"></td>
 
-                <td id="sat8" onclick="colorChange();"></td>
+                <td id="sat8" onclick="selectCell(this);"></td>
 
             </tr>
             <tr>
 
                 <th>9</th>
 
-                <td id="sun9" onclick="colorChange();"></td>
+                <td id="sun9" onclick="selectCell(this);"></td>
 
-                <td id="mon9" onclick="colorChange();"></td>
+                <td id="mon9" onclick="selectCell(this);"></td>
 
-                <td id="tue9" onclick="colorChange();"></td>
+                <td id="tue9" onclick="selectCell(this);"></td>
 
-                <td id="wed9" onclick="colorChange();"></td>
+                <td id="wed9" onclick="selectCell(this);"></td>
 
-                <td id="thu9" onclick="colorChange();"></td>
+                <td id="thu9" onclick="selectCell(this);"></td>
 
-                <td id="fri9" onclick="colorChange();"></td>
+                <td id="fri9" onclick="selectCell(this);"></td>
 
-                <td id="sat9" onclick="colorChange();"></td>
+                <td id="sat9" onclick="selectCell(this);"></td>
 
             </tr>
             <tr>
 
                 <th>10</th>
 
-                <td id="sun10" onclick="colorChange();"></td>
+                <td id="sun10" onclick="selectCell(this);"></td>
 
-                <td id="mon10" onclick="colorChange();"></td>
+                <td id="mon10" onclick="selectCell(this);"></td>
 
-                <td id="tue10" onclick="colorChange();"></td>
+                <td id="tue10" onclick="selectCell(this);"></td>
 
-                <td id="wed10" onclick="colorChange();"></td>
+                <td id="wed10" onclick="selectCell(this);"></td>
 
-                <td id="thu10" onclick="colorChange();"></td>
+                <td id="thu10" onclick="selectCell(this);"></td>
 
-                <td id="fri10" onclick="colorChange();"></td>
+                <td id="fri10" onclick="selectCell(this);"></td>
 
-                <td id="sat10" onclick="colorChange();"></td>
+                <td id="sat10" onclick="selectCell(this);"></td>
 
             </tr>
             <tr>
 
                 <th>11</th>
 
-                <td id="sun11" onclick="colorChange();"></td>
+                <td id="sun11" onclick="selectCell(this);"></td>
 
-                <td id="mon11" onclick="colorChange();"></td>
+                <td id="mon11" onclick="selectCell(this);"></td>
 
-                <td id="tue11" onclick="colorChange();"></td>
+                <td id="tue11" onclick="selectCell(this);"></td>
 
-                <td id="wed11" onclick="colorChange();"></td>
+                <td id="wed11" onclick="selectCell(this);"></td>
 
-                <td id="thu11" onclick="colorChange();"></td>
+                <td id="thu11" onclick="selectCell(this);"></td>
 
-                <td id="fri1" onclick="colorChange();"></td>
+                <td id="fri1" onclick="selectCell(this);"></td>
 
-                <td id="sat11" onclick="colorChange();"></td>
+                <td id="sat11" onclick="selectCell(this);"></td>
 
             </tr>
             <tr>
 
                 <th>12</th>
 
-                <td id="sun12" onclick="colorChange();"></td>
+                <td id="sun12" onclick="selectCell(this);"></td>
 
-                <td id="mon12" onclick="colorChange();"></td>
+                <td id="mon12" onclick="selectCell(this);"></td>
 
-                <td id="tue12" onclick="colorChange();"></td>
+                <td id="tue12" onclick="selectCell(this);"></td>
 
-                <td id="wed12" onclick="colorChange();"></td>
+                <td id="wed12" onclick="selectCell(this);"></td>
 
-                <td id="thu12" onclick="colorChange();"></td>
+                <td id="thu12" onclick="selectCell(this);"></td>
 
-                <td id="fri12" onclick="colorChange();"></td>
+                <td id="fri12" onclick="selectCell(this);"></td>
 
-                <td id="sat12" onclick="colorChange();"></td>
+                <td id="sat12" onclick="selectCell(this);"></td>
 
             </tr>
             <tr>
 
                 <th>13</th>
 
-                <td id="sun13" onclick="colorChange();"></td>
+                <td id="sun13" onclick="selectCell(this);"></td>
 
-                <td id="mon13" onclick="colorChange();"></td>
+                <td id="mon13" onclick="selectCell(this);"></td>
 
-                <td id="tue13" onclick="colorChange();"></td>
+                <td id="tue13" onclick="selectCell(this);"></td>
 
-                <td id="wed13" onclick="colorChange();"></td>
+                <td id="wed13" onclick="selectCell(this);"></td>
 
-                <td id="thu13" onclick="colorChange();"></td>
+                <td id="thu13" onclick="selectCell(this);"></td>
 
-                <td id="fri13" onclick="colorChange();"></td>
+                <td id="fri13" onclick="selectCell(this);"></td>
 
-                <td id="sat13" onclick="colorChange();"></td>
+                <td id="sat13" onclick="selectCell(this);"></td>
 
             </tr>
             <tr>
 
                 <th>14</th>
 
-                <td id="sun14" onclick="colorChange();"></td>
+                <td id="sun14" onclick="selectCell(this);"></td>
 
-                <td id="mon14" onclick="colorChange();"></td>
+                <td id="mon14" onclick="selectCell(this);"></td>
 
-                <td id="tue14" onclick="colorChange();"></td>
+                <td id="tue14" onclick="selectCell(this);"></td>
 
-                <td id="wed14" onclick="colorChange();"></td>
+                <td id="wed14" onclick="selectCell(this);"></td>
 
-                <td id="thu14" onclick="colorChange();"></td>
+                <td id="thu14" onclick="selectCell(this);"></td>
 
-                <td id="fri14" onclick="colorChange();"></td>
+                <td id="fri14" onclick="selectCell(this);"></td>
 
-                <td id="sat14" onclick="colorChange();"></td>
+                <td id="sat14" onclick="selectCell(this);"></td>
 
             </tr>
             <tr>
 
                 <th>15</th>
 
-                <td id="sun15" onclick="colorChange();"></td>
+                <td id="sun15" onclick="selectCell(this);"></td>
 
-                <td id="mon15" onclick="colorChange();"></td>
+                <td id="mon15" onclick="selectCell(this);"></td>
 
-                <td id="tue15" onclick="colorChange();"></td>
+                <td id="tue15" onclick="selectCell(this);"></td>
 
-                <td id="wed15" onclick="colorChange();"></td>
+                <td id="wed15" onclick="selectCell(this);"></td>
 
-                <td id="thu15" onclick="colorChange();"></td>
+                <td id="thu15" onclick="selectCell(this);"></td>
 
-                <td id="fri15" onclick="colorChange();"></td>
+                <td id="fri15" onclick="selectCell(this);"></td>
 
-                <td id="sat15" onclick="colorChange();"></td>
+                <td id="sat15" onclick="selectCell(this);"></td>
 
             </tr>
             <tr>
 
                 <th>16</th>
 
-                <td id="sun16" onclick="colorChange();"></td>
+                <td id="sun16" onclick="selectCell(this);"></td>
 
-                <td id="mon16" onclick="colorChange();"></td>
+                <td id="mon16" onclick="selectCell(this);"></td>
 
-                <td id="tue16" onclick="colorChange();"></td>
+                <td id="tue16" onclick="selectCell(this);"></td>
 
-                <td id="wed16" onclick="colorChange();"></td>
+                <td id="wed16" onclick="selectCell(this);"></td>
 
-                <td id="thu16" onclick="colorChange();"></td>
+                <td id="thu16" onclick="selectCell(this);"></td>
 
-                <td id="fri16" onclick="colorChange();"></td>
+                <td id="fri16" onclick="selectCell(this);"></td>
 
-                <td id="sat16" onclick="colorChange();"></td>
+                <td id="sat16" onclick="selectCell(this);"></td>
 
             </tr>
             <tr>
 
                 <th>17</th>
 
-                <td id="sun17" onclick="colorChange();"></td>
+                <td id="sun17" onclick="selectCell(this);"></td>
 
-                <td id="mon17" onclick="colorChange();"></td>
+                <td id="mon17" onclick="selectCell(this);"></td>
 
-                <td id="tue17" onclick="colorChange();"></td>
+                <td id="tue17" onclick="selectCell(this);"></td>
 
-                <td id="wed17" onclick="colorChange();"></td>
+                <td id="wed17" onclick="selectCell(this);"></td>
 
-                <td id="thu17" onclick="colorChange();"></td>
+                <td id="thu17" onclick="selectCell(this);"></td>
 
-                <td id="fri17" onclick="colorChange();"></td>
+                <td id="fri17" onclick="selectCell(this);"></td>
 
-                <td id="sat17" onclick="colorChange();"></td>
+                <td id="sat17" onclick="selectCell(this);"></td>
 
             </tr>
             <tr>
 
                 <th>18</th>
 
-                <td id="sun18" onclick="colorChange();"></td>
+                <td id="sun18" onclick="selectCell(this);"></td>
 
-                <td id="mon18" onclick="colorChange();"></td>
+                <td id="mon18" onclick="selectCell(this);"></td>
 
-                <td id="tue18" onclick="colorChange();"></td>
+                <td id="tue18" onclick="selectCell(this);"></td>
 
-                <td id="wed18" onclick="colorChange();"></td>
+                <td id="wed18" onclick="selectCell(this);"></td>
 
-                <td id="thu18" onclick="colorChange();"></td>
+                <td id="thu18" onclick="selectCell(this);"></td>
 
-                <td id="fri18" onclick="colorChange();"></td>
+                <td id="fri18" onclick="selectCell(this);"></td>
 
-                <td id="sat18" onclick="colorChange();"></td>
+                <td id="sat18" onclick="selectCell(this);"></td>
 
             </tr>
             <tr>
 
                 <th>19</th>
 
-                <td id="sun19" onclick="colorChange();"></td>
+                <td id="sun19" onclick="selectCell(this);"></td>
 
-                <td id="mon19" onclick="colorChange();"></td>
+                <td id="mon19" onclick="selectCell(this);"></td>
 
-                <td id="tue19" onclick="colorChange();"></td>
+                <td id="tue19" onclick="selectCell(this);"></td>
 
-                <td id="wed19" onclick="colorChange();"></td>
+                <td id="wed19" onclick="selectCell(this);"></td>
 
-                <td id="thu19" onclick="colorChange();"></td>
+                <td id="thu19" onclick="selectCell(this);"></td>
 
-                <td id="fri19" onclick="colorChange();"></td>
+                <td id="fri19" onclick="selectCell(this);"></td>
 
-                <td id="sat19" onclick="colorChange();"></td>
+                <td id="sat19" onclick="selectCell(this);"></td>
 
             </tr>
             <tr>
 
                 <th>20</th>
 
-                <td id="sun20" onclick="colorChange();"></td>
+                <td id="sun20" onclick="selectCell(this);"></td>
 
-                <td id="mon20" onclick="colorChange();"></td>
+                <td id="mon20" onclick="selectCell(this);"></td>
 
-                <td id="tue20" onclick="colorChange();"></td>
+                <td id="tue20" onclick="selectCell(this);"></td>
 
-                <td id="wed20" onclick="colorChange();"></td>
+                <td id="wed20" onclick="selectCell(this);"></td>
 
-                <td id="thu20" onclick="colorChange();"></td>
+                <td id="thu20" onclick="selectCell(this);"></td>
 
-                <td id="fri20" onclick="colorChange();"></td>
+                <td id="fri20" onclick="selectCell(this);"></td>
 
-                <td id="sat20" onclick="colorChange();"></td>
+                <td id="sat20" onclick="selectCell(this);"></td>
 
             </tr>
             <tr>
 
                 <th>21</th>
 
-                <td id="sun21" onclick="colorChange();"></td>
+                <td id="sun21" onclick="selectCell(this);"></td>
 
-                <td id="mon21" onclick="colorChange();"></td>
+                <td id="mon21" onclick="selectCell(this);"></td>
 
-                <td id="tue21" onclick="colorChange();"></td>
+                <td id="tue21" onclick="selectCell(this);"></td>
 
-                <td id="wed21" onclick="colorChange();"></td>
+                <td id="wed21" onclick="selectCell(this);"></td>
 
-                <td id="thu21" onclick="colorChange();"></td>
+                <td id="thu21" onclick="selectCell(this);"></td>
 
-                <td id="fri21" onclick="colorChange();"></td>
+                <td id="fri21" onclick="selectCell(this);"></td>
 
-                <td id="sat21" onclick="colorChange();"></td>
+                <td id="sat21" onclick="selectCell(this);"></td>
 
             </tr>
             <tr>
 
                 <th>22</th>
 
-                <td id="sun22" onclick="colorChange();"></td>
+                <td id="sun22" onclick="selectCell(this);"></td>
 
-                <td id="mon22" onclick="colorChange();"></td>
+                <td id="mon22" onclick="selectCell(this);"></td>
 
-                <td id="tue22" onclick="colorChange();"></td>
+                <td id="tue22" onclick="selectCell(this);"></td>
 
-                <td id="wed22" onclick="colorChange();"></td>
+                <td id="wed22" onclick="selectCell(this);"></td>
 
-                <td id="thu22" onclick="colorChange();"></td>
+                <td id="thu22" onclick="selectCell(this);"></td>
 
-                <td id="fri22" onclick="colorChange();"></td>
+                <td id="fri22" onclick="selectCell(this);"></td>
 
-                <td id="sat22" onclick="colorChange();"></td>
+                <td id="sat22" onclick="selectCell(this);"></td>
 
             </tr>
             <tr>
 
                 <th>23</th>
 
-                <td id="sun23" onclick="colorChange();"></td>
+                <td id="sun23" onclick="selectCell(this);"></td>
 
-                <td id="mon23" onclick="colorChange();"></td>
+                <td id="mon23" onclick="selectCell(this);"></td>
 
-                <td id="tue23" onclick="colorChange();"></td>
+                <td id="tue23" onclick="selectCell(this);"></td>
 
-                <td id="wed23" onclick="colorChange();"></td>
+                <td id="wed23" onclick="selectCell(this);"></td>
 
-                <td id="thu23" onclick="colorChange();"></td>
+                <td id="thu23" onclick="selectCell(this);"></td>
 
-                <td id="fri23" onclick="colorChange();"></td>
+                <td id="fri23" onclick="selectCell(this);"></td>
 
-                <td id="sat23" onclick="colorChange();"></td>
+                <td id="sat23" onclick="selectCell(this);"></td>
 
             </tr>
 
