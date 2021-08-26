@@ -1,6 +1,6 @@
 body{
-    margin-right: 10%; 
-    margin-left: 10%; 
+    margin-right: 5%; 
+    margin-left: 5%; 
     text-align: center; 
 }
 
@@ -29,4 +29,21 @@ padding: 8px;
 tr:nth-child(even) {
 background-color: #dddddd;
 }
+
+#ackBtn{
+    right: 15%;
+}
+
+#tname{
+    position: absolute;
+    right: 120px;
+    top: 20px;
+}
+
+#ackContainer{
+    position: absolute;
+    right: 140px;
+    top: 45px;
+}
+
 

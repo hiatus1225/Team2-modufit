@@ -13,46 +13,158 @@
             <img src="images/headerImg.jpg" width="100%">
         </header>
         <nav>
-            <div id="static1"> - <b>신청관리</b> </div>
+            <div> <a id="ahref1" href="#" onclick="javascript:hrefClick(this.id);"> - <b>신청관리</b> </a></div>
             <br/>
-            <div id="static2"> - 강사관리</div>
+            <div> <a id="ahref2" href="#" onclick="javascript:hrefClick(this.id);"> - 강사관리</a> </div>
             <br/>
-            <div id="static4"> - 스케줄관리 </div>
+            <div> <a id="ahref3" href="#" onclick="javascript:hrefClick(this.id);"> - 스케줄관리</a> </div>
         </nav>
     </div>
-    <div>
-        <table>
-            <tr>
-                <th>회원ID</th>
-                <th>성별</th>
-                <th>주소</th>
-                <th>연락처</th>
-                <th>요일&시간</th>
-                <th>담당 강사</th>
-                <th>승인여부</th>
-            </tr>
+    <div style="float: left;">
+        <table style="width: 700px;">
+            <thead>
+                <tr>
+                    <th>회원ID</th>
+                    <th>성별</th>
+                    <th>주소</th>
+                    <th>연락처</th>
+                    <th>요일&시간</th>
+                    <th>담당 강사</th>
+                    <th>승인여부</th>
+                </tr>
+            </thead>    
             <tbody id="rows" style="height: 1cm;">
-                
-                <th> <input type="checkbox" id="ack" name="ack" value="ack">
-                </th>
+                <tr> 
+                    <td class="idtd" id="idtd1">hiatus</td>
+                    <td class="nametd" id="nametd1">박성호</td>
+                    <td class="addresstd" id="addresstd1">전남 순천시 석현안길 23-4 드림빌 403호</td>
+                    <td class="phonetd" id="phonetd1">0100000000</td>
+                    <td class="timetd" id="timetd1">수요일 10~12시</td>
+                    <td class="teachertd" id="teachertd1">마동석</td>
+                    <td class="ACKtd"><input type="checkbox" class="ACKCheckbox" id="ackCheckbox1" name="ackCheckbox" value="ack"></td>
+                </tr>
+                <tr> 
+                    <td class="idtd" id="idtd1">hiatus</td>
+                    <td class="nametd" id="nametd1">박성호</td>
+                    <td class="addresstd" id="addresstd1">전남 순천시 석현안길 23-4 드림빌 403호</td>
+                    <td class="phonetd" id="phonetd1">0100000000</td>
+                    <td class="timetd" id="timetd1">수요일 10~12시</td>
+                    <td class="teachertd" id="teachertd1">마동석</td>
+                    <td class="ACKtd"><input type="checkbox" class="ACKCheckbox" id="ackCheckbox1" name="ackCheckbox" value="ack"></td>
+                </tr>
+                <tr> 
+                    <td class="idtd" id="idtd1">hiatus</td>
+                    <td class="nametd" id="nametd1">박성호</td>
+                    <td class="addresstd" id="addresstd1">전남 순천시 석현안길 23-4 드림빌 403호</td>
+                    <td class="phonetd" id="phonetd1">0100000000</td>
+                    <td class="timetd" id="timetd1">수요일 10~12시</td>
+                    <td class="teachertd" id="teachertd1">마동석</td>
+                    <td class="ACKtd"><input type="checkbox" class="ACKCheckbox" id="ackCheckbox1" name="ackCheckbox" value="ack"></td>
+                </tr>
+                <tr> 
+                    <td class="idtd" id="idtd1">hiatus</td>
+                    <td class="nametd" id="nametd1">박성호</td>
+                    <td class="addresstd" id="addresstd1">전남 순천시 석현안길 23-4 드림빌 403호</td>
+                    <td class="phonetd" id="phonetd1">0100000000</td>
+                    <td class="timetd" id="timetd1">수요일 10~12시</td>
+                    <td class="teachertd" id="teachertd1">마동석</td>
+                    <td class="ACKtd"><input type="checkbox" class="ACKCheckbox" id="ackCheckbox1" name="ackCheckbox" value="ack"></td>
                 </tr>
             </tbody>
         </table>
     </div>
-<select id = "tname">
-    <option value="">강사</option>
-    <option value="홍길동">홍길동</option>
-    <option value="어린왕자">어린왕자</option>
-    <option value="심봉사">심봉사</option>
-    <option value="춘향">춘향</option>
-    <option value="콩쥐">콩쥐</option>
-    <option value="팥쥐">팥쥐</option>
-    <option value="신데렐라">신데렐라</option>
-</select>
-
-<input type="button" id="button1" name="ack" value="승인">
+    <div style="position: absolute; float: right; right: -4%;">
+        <select id = "tname">
+            <option value="" selected disabled hidden>강사</option>
+            <!-- <option value="홍길동">홍길동</option>
+            <option value="어린왕자">어린왕자</option>
+            <option value="심봉사">심봉사</option>
+            <option value="춘향">춘향</option>
+            <option value="콩쥐">콩쥐</option>
+            <option value="팥쥐">팥쥐</option>
+            <option value="신데렐라">신데렐라</option> -->
+        </select>
+        <div id="ackContainer"style="position:absolute">
+            <input type="button" id="ackBtn" name="ackBtn" onclick="approveBtn();" value="승인">
+        </div>
+    </div>
 </body>
 <script>
+    function hrefClick(ahref) {
+        // alert(ahref);
+        switch(ahref){
+            case "ahref1":
+                location.href="manageApply.html";
+                break;
+            case "ahref2":
+                location.href="teacherManage.html";
+                break;
+            case "ahref3":
+                location.href="schedule.html";
+                break;
+            default:
+            location.href="#";
+        }
+    }
 
+    var addHtmls = "<option value='' selected disabled hidden>강사</option>";
+    var teachers = JSON.parse(localStorage.getItem('teacher'));
+    document.addEventListener("DOMContentLoaded", function(){
+        var dat = {
+            t0:'마동석',
+            t1:'권율',
+            t2:'이순신',
+            t3:'홍길동'
+        };
+        datas = JSON.stringify(dat);
+        localStorage.setItem('teacher',datas);
+        
+        // for(let i = 1; i< Object.keys(dat).length+1;i++){
+        //     addHtmls = addHtmls + "<option value='"+ dat[i] + "'>" + dat[i] + "</option>";
+        // }
+        // var addHtml = "<option value='' selected disabled hidden>강사</option>";
+        for(let i = 0; i<Object.keys(teachers).length; i++){
+            addHtmls = addHtmls + "<option value='"+ teachers["t"+i] + "'>" + teachers["t"+i] + "</option>";
+        }
+        // alert(addHtml);
+        // <option value="홍길동">홍길동</option>
+        document.getElementById("tname").innerHTML = addHtmls;
+    });
+
+    function approveBtn() {
+
+        var checkerCount = document.getElementsByClassName("ACKCheckbox").length;
+        console.log(checkerCount);
+        // var checker = document.getElementById("acktd1").checked;
+        // if(checker === true){
+        //     var id = document.getElementById("idtd1").innerText;
+        //     var name = document.getElementById("nametd1").innerText;
+        //     var address = document.getElementById("addresstd1").innerText;
+        //     var phone = document.getElementById("phonetd1").innerText;
+        //     var time = document.getElementById("timetd1").innerText;
+        //     var teacher = document.getElementById("teachertd1").innerText;
+        //     var ack = document.getElementById("acktd1").checked;
+
+        //     var applyInfo = {
+        //         id: id,
+        //         name: name,
+        //         address: address,
+        //         phone: phone,
+        //         time: time,
+        //         teacher: teacher,
+        //         ack: ack,
+        //     };
+        // }
+
+
+    }
+
+    // <td class="idtd" id="idtd1">hiatus</td>
+    // <td class="nametd" id="nametd1">박성호</td>
+    // <td class="addresstd" id="addresstd1">전남 순천시 석현안길 23-4 드림빌 403호</td>
+    // <td class="phonetd" id="phonetd1">0100000000</td>
+    // <td class="timetd" id="timetd1">수요일 10~12시</td>
+    // <td class="teachertd" id="teachertd1">마동석</td>
+    // <td class="ACKtd"><input type="checkbox" id="ackCheckbox1" 
 </script>
 </html>
