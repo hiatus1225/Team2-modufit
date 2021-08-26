@@ -2,7 +2,7 @@
 
 function selectCell(selected){
     var id = selected.id;
-    
+    var manager = document.getElementById('manager').value;
     var selectedCell = document.getElementById(id);
     // alert(id);
     selectedCell.innerText = prompt("메모할 내용을 입력해 주세요.","");
@@ -32,7 +32,7 @@ localStorage.setItem(managerkey, JSON.stringify(managerInfo));
 
 
 }
-localStorage.setItem(document.getElementById('manager').value, document.getElementById('manager').value);
+
 //------------------------------------------------------------------
 
  
