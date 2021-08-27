@@ -1,3 +1,12 @@
+function chageSelectedValue(){
+  var yourTestSelect = document.getElementById("TestSelect");
+    
+  // select element에서 선택된 option의 value가 저장됩니다.
+  var selectedValue = yourTestSelect.options[yourTestSelect.selectedIndex].value;
+
+  // select element에서 선택된 option의 text가 저장된다.
+  var selectedText = yourTestSelect.options[yourTestSelect.selectedIndex].text;
+}
 var tel = document.getElementById('phone').value;
 var teachkey = '__teach__' + tel;
 
@@ -82,6 +91,7 @@ function delete_row1(button) {
    my_tbody.deleteRow(index-1);
   
 }
+
 function delete_row(button) {
 
   // alert(button);
@@ -98,12 +108,7 @@ function delete_row(button) {
 
 
     // to---------------------------------do
-  // var tr= button.parentNode.parentNode;
-  // var index = tr.rowIndex - 1;
-  // var my_tbody = document.getElementById('tbody');
-
-  my_tbody.deleteRow(index-1);
-  
+   
   // for (let i = 0; i < localStorage.length; i++) {
   //   number[i]=JSON.parse(localStorage.getItem(localStorage.key(i))).number;
   // }
@@ -121,13 +126,3 @@ function delete_row(button) {
 //   for(let i=0;i<localStorage.length;i++) {
 //      names[i]=JSON.parse(localStorage.getitem(localStorage.key(i))).name;}
 // }
-
-function chageSelectedValue(){
-    var yourTestSelect = document.getElementById("TestSelect");
-      
-    // select element에서 선택된 option의 value가 저장됩니다.
-    var selectedValue = yourTestSelect.options[yourTestSelect.selectedIndex].value;
-  
-    // select element에서 선택된 option의 text가 저장된다.
-    var selectedText = yourTestSelect.options[yourTestSelect.selectedIndex].text;
-}
