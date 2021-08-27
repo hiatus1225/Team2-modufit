@@ -15,7 +15,7 @@ function bt1_click() {
     var userInfo;
     try {
         userInfo = JSON.parse(localStorage.getItem("__user__" + u1.user_id.value));
-        var pw = userInfo["pw"];
+        var pw = userInfo["pw1"];
     } catch (e) {
         alert("로그인에 실패하였습니다.");
         return;
@@ -30,16 +30,18 @@ function bt1_click() {
             return;
         }
         // 패스워드 일치시
-        var pw = userInfo["pw"];
+        console.log(userInfo);
+        var pw = userInfo["pw1"];
+
         if(pw===u1.pw.value){
             var sessionUserInfo = {
-                    name: userInfo["name"],
-                    contact: userInfo["contact"],
-                    id: userInfo["id"],
-                    age: userInfo["age"],
-                    gender: userInfo["gender"],
-                    rank: userInfo["rank"]
-                };
+                name: userInfo["name"],
+                contact: userInfo["contact"],
+                id: userInfo["id"],
+                age: userInfo["age"],
+                gender: userInfo["gender"],
+                rank: userInfo["rank"]
+            };
             sessionStorage.setItem("__user__",JSON.stringify(sessionUserInfo));
             if(userInfo["rank"]==1){location.href="welcome.html"; return}
             location.href="manageApply.html";
