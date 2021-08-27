@@ -17,7 +17,7 @@ function bt1_click() {
         userInfo = JSON.parse(localStorage.getItem("__user__" + u1.user_id.value));
         var pw = userInfo["pw"];
     } catch (e) {
-        alert("로그인에 실패하였습니다.20");
+        alert("로그인에 실패하였습니다.");
         return;
     }
 
@@ -26,7 +26,7 @@ function bt1_click() {
         userInfo = JSON.parse(localStorage.getItem("__user__" + u1.user_id.value));
         // 아이디가 존재하지 않을 경우
         if(userInfo===null){
-            alert("로그인에 실패하였습니다.29");
+            alert("로그인에 실패하였습니다.");
             return;
         }
         // 패스워드 일치시
@@ -45,11 +45,11 @@ function bt1_click() {
             location.href="manageApply.html";
             return;
         }
-        alert("로그인에 실패하였습니다.48");
+        alert("로그인에 실패하였습니다.");
     } catch (e) {
         // 로그인 실패시
         console.log(e);
-        alert("로그인에 실패하였습니다.52");
+        alert("로그인에 실패하였습니다.");
         return;
     }
 }

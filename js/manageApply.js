@@ -40,29 +40,29 @@ document.addEventListener("DOMContentLoaded", function(){
     document.getElementById("tname").innerHTML = addHtmls;
 
 
-    for(let i = 1; i <= 10; i++){
+    // for(let i = 1; i <= 10; i++){
 
     
 // -------------더미 데이터 작성
 // ------------멤버 더미
-        var members = {
-            id:'zepar'+i,
-            age:"45"+(i+1)*2
-        };
-        localStorage.setItem("__user__"+members['id'],JSON.stringify(members));
+        // var members = {
+        //     id:'zepar'+i,
+        //     age:"45"+(i+1)*2
+        // };
+        // localStorage.setItem("__user__"+members['id'],JSON.stringify(members));
 // ------------신청 더미
-        var apply = {
-            id: members['id'],
-            date:'2021-08-0'+i,
-            teacher:'마동석'+i,
-            phone:'0100000000'+i,
-            address:'전남 순천시 석현 안길 23-4 드림빌 40'+i,
-            time:'1'+i+':00',
-            gender:'남자',
-            ack:"false"
-        };
-        localStorage.setItem("__apply__"+i,JSON.stringify(apply));
-    }
+        // var apply = {
+        //     id: members['id'],
+        //     date:'2021-08-0'+i,
+        //     teacher:'마동석'+i,
+        //     phone:'0100000000'+i,
+        //     address:'전남 순천시 석현 안길 23-4 드림빌 40'+i,
+        //     time:'1'+i+':00',
+        //     gender:'남자',
+        //     ack:"false"
+        // };
+        // localStorage.setItem("__apply__"+i,JSON.stringify(apply));
+    // }
 
     
     // ---------------데이터 호출및 프린트
