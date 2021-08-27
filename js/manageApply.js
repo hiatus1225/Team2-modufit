@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function(){
                 var udata = JSON.parse(localStorage.getItem("__apply__"+i));
                 addhtmls = addhtmls + '<td class="idtd" id="idtd"'+i+'">'+udata.id+'</td>';
                 addhtmls = addhtmls + '<td class="nametd" id="nametd"'+i+'">'+udata.gender+'</td>';
-                addhtmls = addhtmls + '<td class="addresstd" id="addresstd"'+i+'">'+udata.address+'</td>';
                 addhtmls = addhtmls + '<td class="phonetd" id="phonetd"'+i+'">'+udata.phone+'</td>';
                 addhtmls = addhtmls + '<td class="timetd" id="timetd"'+i+'">'+udata.time+'</td>';
                 addhtmls = addhtmls + '<td class="teachertd" id="teachertd"'+i+'">'+udata.teacher.substr(0,3) +'</td>';
