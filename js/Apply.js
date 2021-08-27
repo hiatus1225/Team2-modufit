@@ -58,6 +58,7 @@ function button01_click(){
     
     console.log(userInfo);
     localStorage.setItem(applykey, JSON.stringify(userInfo));
+    alert("신청이 완료되었습니다.")
         location.href="welcome.html";
     }
 }
