@@ -138,7 +138,3 @@
   }
   
     localStorage.setItem(document.getElementById('name').value, document.getElementById('name').value);
-        
-      
-      
-  
