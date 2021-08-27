@@ -75,6 +75,7 @@
       pw1: pw1,
       age: age,
       gender: gender,
+      address: address,
       rank:1
     }
 

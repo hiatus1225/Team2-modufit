@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modu Fit</title>
     <link rel="icon" href="images/icon.png">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/teacherManage.css">
 </head>
 <body>
     <div id="wapper">
@@ -18,6 +18,9 @@
             <div> <a id="ahref2" href="#" onclick="javascript:hrefClick(this.id);"> - 강사관리</a> </div>
             <br/>
             <div> <a id="ahref3" href="#" onclick="javascript:hrefClick(this.id);"> - 스케줄관리</a> </div>
+            <br/>
+            <div> <a id="ahref4" href="#" onclick="javascript:hrefClick(this.id);"> - 로그아웃</a> </div>
+            
         </nav>
     </div>
     <div style="float: left;">
@@ -26,21 +29,23 @@
                 <tr>
                     <th>회원ID</th>
                     <th>성별</th>
+                    <th>주소</th>
                     <th>연락처</th>
                     <th>요일&시간</th>
                     <th>담당 강사</th>
                     <th>승인여부</th>
                 </tr>
             </thead>    
-            <tbody id="rows" style="height: 1cm;">
-                <tr>
-                    <td class="idtd" id="idtd1">hiatus</td>
-                    <td class="gendertd" id="gendertd">박성호</td>
+            <tbody class = "" id="rows" style="height: 1cm;">
+                <!-- <tr>
+                    <td class="idtd" id="idtd1">hiatus1225</td>
+                    <td class="gendertd" id="gendertd">남</td>
+                    <td class="addresstd" id="addresstd1">전남 순천시 석현안길 23-4 드림빌 403호</td>
                     <td class="phonetd" id="phonetd1">0100000000</td>
-                    <td class="timetd" id="timetd1">수요일 10~12시</td>
+                    <td class="timetd" id="timetd1">수요일 12시</td>
                     <td class="teachertd" id="teachertd1">박희순</td>
                     <td class="ACKtd"><input type="checkbox" class="ACKCheckbox" id="ackCheckbox1" name="ackCheckbox" value="ack"></td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
     </div>

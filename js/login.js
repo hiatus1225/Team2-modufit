@@ -40,7 +40,10 @@ function bt1_click() {
                 id: userInfo["id"],
                 age: userInfo["age"],
                 gender: userInfo["gender"],
-                rank: userInfo["rank"]
+                rank: userInfo["rank"],
+                address: userInfo["address"],
+                phone: userInfo["contact"]
+
             };
             sessionStorage.setItem("__user__",JSON.stringify(sessionUserInfo));
             if(userInfo["rank"]==1){location.href="welcome.html"; return}

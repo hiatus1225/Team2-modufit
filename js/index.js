@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
     var userInfo = {
             name: 'admin',
             id: 'admin',
-            pw: '0',
+            pw1: 'admin',
             rank: 0
         }
 

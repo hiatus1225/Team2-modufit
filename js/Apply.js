@@ -36,7 +36,8 @@ document.addEventListener("DOMContentLoaded", function(){
 // }
 
 function button01_click(){
-    
+    var member = JSON.parse(sessionStorage.getItem("__user__"))['id'];
+    var memberInfo = JSON.parse(sessionStorage.getItem("__user__"));
     var date = document.getElementById('date').value;
     var gender = document.getElementById('gender').value;
     var name = document.getElementById('name').value;
@@ -52,7 +53,9 @@ function button01_click(){
         date: date,
         gender: gender,
         name: name,
-        time: time
+        time: time,
+        id: member,
+        member: memberInfo
     }
     
     
