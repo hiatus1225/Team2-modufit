@@ -15,7 +15,7 @@ function bt1_click() {
     var userInfo;
     try {
         userInfo = JSON.parse(localStorage.getItem("__user__" + u1.user_id.value));
-        var pw = userInfo["pw"];
+        var pw = userInfo["pw1"];
     } catch (e) {
         alert("로그인에 실패하였습니다.");
         return;
