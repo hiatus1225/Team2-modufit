@@ -72,9 +72,16 @@ function add_row(data) {
   cell2.innerHTML = '<input type="text" id="gender" value="'+data.gender+'" disabled />';
   cell3.innerHTML = '<input type="text" id="age" value="'+data.age+'" disabled />';
   cell4.innerHTML = '<input type="tel" id="phone" value="'+data.tel+'"disabled/>';
-  cell5.innerHTML = '<button id ="__teach__'+data.tel+'" onclick="delete_row(this.id);">삭제</button>'
+  cell5.innerHTML = '<button id ="__teach__'+data.tel+'" onclick="delete_row(this.id); delete_row1(this);">삭제</button>'
 }
 
+function delete_row1(button) {
+  var tr= button.parentNode.parentNode;
+   var index = tr.rowIndex - 1;
+   var my_tbody = document.getElementById('tbody');
+   my_tbody.deleteRow(index-1);
+  
+}
 function delete_row(button) {
 
   // alert(button);
