@@ -30,7 +30,7 @@ function bt1_click() {
             return;
         }
         // 패스워드 일치시
-        var pw = userInfo["pw"];
+        var pw = userInfo["pw1"];
         if(pw===u1.pw.value){
             var sessionUserInfo = {
                     name: userInfo["name"],
